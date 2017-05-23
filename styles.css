@@ -220,6 +220,10 @@ aside {
   #contact {
     display: block;
   }
+
+  #arrows {
+    margin-top: 25vh;
+  }
 }
 
 /*MEDIA QUERIES 3RD BREAK*/
@@ -242,4 +246,29 @@ aside {
    text-align: center;
    margin: auto;
  }
+}
+
+/*MEDIA QUERIES 4TH BREAK*/
+
+@media (max-width: 370px) {
+  .header-box {
+    width: 100%;
+    margin: 0;
+  }
+
+  article {
+    width: 50%;
+  }
+
+  p {
+    padding-bottom: 45px;
+  }
+
+  .info {
+    padding-bottom: 0px;
+  }
+
+  #arrows {
+    margin-top: 25vh;
+  }
 }
