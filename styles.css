@@ -3,39 +3,42 @@
 }
 
 .info {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 125%;
+  margin-bottom: 10px;
 }
 
 body {
   display: flex;
   font-family: 'Roboto', sans-serif;
   color: white;
+  margin: 0px;
+  padding: 0px;
 }
 
 .left-side {
   display: flex;
-  /*display: inline-block;*/
   flex-wrap: wrap;
   height: 100%;
   width: 60%;
 }
 
-.left {
-  padding-left: 15px;
-  display: inline-block;
+#resume,
+#contact {
+  height: 15px;
+  width: 50px;
+  font-size: 14px;
 }
 
-.right {
-  background-repeat: no-repeat;
-  background-image: url('assets/newspaper.svg');
-  background-position: right;
-  background-size: 20%;
-  display: inline-block;
+.newspaper,
+.contact {
+  width: 20px;
+  height: 20px;
 }
 
 p {
-  margin-bottom: 8px;
+  margin-bottom: 80px;
+  font-size: 12px;
 }
 
 article {
@@ -49,21 +52,31 @@ article {
 }
 
 h6 {
-  font-size: 4px;
-  /*padding-left: 10px;*/
+  font-size: 25px;
   color: #FFFFFF;
+  margin-bottom: 10px;
+  margin-top: 40px;
 
 }
 
-.bigger-box {
+.header-box {
   background-color: #86BEC1;
-  background-repeat: no-repeat;
-  /*background-image: url('assets/newspaper.svg');*/
-  background-position: right;
-  background-size: 20%;
   width: 66.6666%;
   text-align: left;
   display: inline-block;
+  padding-left: 25px;
+}
+
+#resume,
+#contact {
+  width: 120px;
+  height: 50px;
+  border: 2px solid #FFFFFF;
+  background-color: inherit;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-top: 15px;
+
 }
 
 .stats {
@@ -126,11 +139,102 @@ aside {
   background-image: url(assets/griffey.jpeg);
   background-size: cover;
   background-position: center;
-  /*display: inline-block;*/
   height: 100%;
   width: 40%;
 }
 
-@media (max-width: 800px) {
+#page-location {
+  float: right;
+}
 
+.circles {
+  width: 20px;
+}
+
+#arrows {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50vh;
+}
+
+.left-arrow,
+.right-arrow {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  width: 20px;
+}
+
+/*MEDIA QUERIES 1ST BREAK*/
+
+@media (max-width: 1024px) {
+  main {
+    display: block;
   }
+
+  .left-side {
+    width: 50%;
+  }
+
+  .right-side {
+    width: 50%;
+  }
+
+  .header-box {
+    width: 66.6666%;
+  }
+
+  article {
+    width: 33.3333%;
+  }
+}
+
+/*MEDIA QUERIES 2ND BREAK*/
+
+@media (max-width: 866px) {
+  body {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  aside {
+  background-image: url(assets/griffey24.jpg);
+  height: 50vh;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+  }
+
+  #resume.
+  #contact {
+    display: block;
+  }
+}
+
+/*MEDIA QUERIES 3RD BREAK*/
+
+@media (max-width: 432px) {
+  #resume,
+  #contact {
+    width: 90px;
+  }
+
+ .info {
+   font-size: 12px;
+ }
+
+ h6 {
+   font-size: 18px;
+ }
+
+ .header-box {
+   text-align: center;
+   margin: auto;
+ }
+}
